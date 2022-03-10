@@ -49,4 +49,4 @@ ThemeBtn.onclick = Themes;
 
 
 
-console.log(`[X=${window.innerWidth}], [Y=${window.innerHeight}]`) ;
+console.log(`[X=${window.innerWidth}], [Y=${window.innerHeight}]`);
