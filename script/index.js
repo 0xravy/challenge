@@ -18,8 +18,8 @@ function Themes () {
         ThemeBtn.style.color = '#000';
         DarkTheme.style.display = 'none';
         LightTheme.style.display = 'block';
-        console.log('DarkTheme')
-        theme = false
+        console.log('DarkTheme');
+        theme = false;
     } else if (theme == false) {
         localStorage.setItem('themeDark', false);
         root.style.setProperty('--bg', '#ffffff');
@@ -30,22 +30,22 @@ function Themes () {
         ThemeBtn.style.color = '#fff';
         DarkTheme.style.display = 'block';
         LightTheme.style.display = 'none';
-        console.log('LightTheme')
-        theme = true
+        console.log('LightTheme');
+        theme = true;
     }
     
 }
 
-const themeDark = localStorage.getItem('themeDark')
+const themeDark = localStorage.getItem('themeDark');
 if(themeDark == 'true'){
-    theme = true
-    Themes()
+    theme = true;
+    Themes();
 } else if(themeDark == 'false') {
-    theme = false
-    Themes()
+    theme = false;
+    Themes();
 }
 
-ThemeBtn.onclick = Themes
+ThemeBtn.onclick = Themes;
 
 
 
