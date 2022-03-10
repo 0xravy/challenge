@@ -3,6 +3,11 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
+
+    &::selection {
+        background: #222222;
+        color: #00eeff;
+    }
     
 }
 
@@ -12,7 +17,31 @@ html {
 
 body {
     font-family: 'El Messiri', sans-serif;
-    background-color: $bg;
+    background-color: var(--bg);
     width: 100%;
     min-height:  1500px;
+}
+
+.btn-dark-light {
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    top: 100px;
+    border-radius: 50%;
+    font-size: 4rem;
+    background: #161616;
+    color: #fff;
+    transition: all 0.1s ease-in-out;
+    z-index: 100;
+    border: none;
+
+
+    &:hover {
+        transform: translateX(10px);
+        transition: all 0.1s ease-in-out;
+    }
+
+    .LightTheme {
+        display: none;
+    }
 }

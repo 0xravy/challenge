@@ -1,10 +1,27 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri&display=swap");
+:root {
+  --bg: #ffffff;
+  --c-1: #707070;
+  --c-2: #7CB440;
+  --c-3: #00AFC5;
+}
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
+}
+
+*::-moz-selection {
+  background: #222222;
+  color: #00eeff;
+}
+
+*::selection {
+  background: #222222;
+  color: #00eeff;
 }
 
 html {
@@ -13,9 +30,35 @@ html {
 
 body {
   font-family: 'El Messiri', sans-serif;
-  background-color: #ffff;
+  background-color: var(--bg);
   width: 100%;
   min-height: 1500px;
+}
+
+.btn-dark-light {
+  height: 70px;
+  width: 70px;
+  position: fixed;
+  top: 100px;
+  border-radius: 50%;
+  font-size: 4rem;
+  background: #161616;
+  color: #fff;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  z-index: 100;
+  border: none;
+}
+
+.btn-dark-light:hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn-dark-light .LightTheme {
+  display: none;
 }
 
 section {
@@ -70,11 +113,11 @@ section header .links {
 section header .links a {
   font-size: 2.5rem;
   font-weight: 500;
-  color: #707070;
+  color: var(--c-1);
 }
 
 section header .links a:hover {
-  color: #00AFC5;
+  color: var(--c-3);
 }
 
 section header .input i {
@@ -82,21 +125,22 @@ section header .input i {
   -webkit-transform: translate(0px, -5px);
           transform: translate(0px, -5px);
   font-size: 2.5rem;
-  color: #00AFC5;
+  color: var(--c-3);
   z-index: 1;
 }
 
 section header .input input {
   padding-left: 25px;
   font-weight: 1000;
-  color: #00545f;
+  color: var(--c-3);
   text-align: right;
   outline: none;
-  color: #00AFC5;
+  background: var(--bg);
+  color: var(--c-3);
   font-size: 20px;
   height: 30px;
   border: none;
-  border-bottom: 1px solid #00AFC5;
+  border-bottom: 1px solid var(--c-3);
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -111,12 +155,69 @@ section .imgs {
   gap: 20px;
 }
 
-section .imgs img {
+section .imgs div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+section .imgs div img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   background-color: #000;
+}
+
+section .imgs div::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: var(--c-1);
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+}
+
+section .imgs div:after {
+  content: "ازرائيل";
+  position: absolute;
+  font-size: 1rem;
+  color: #fff;
+}
+
+section .imgs .div-1:after {
+  content: "توربينات الرياح (Wind Turbines)";
+  position: absolute;
+  font-size: 3rem;
+  color: #fff;
+  bottom: 10px;
+  right: 10px;
+}
+
+section .imgs .div-2:after {
+  content: "ازرائيل";
+  position: absolute;
+  padding: 2px 15px;
+  font-size: 1rem;
+  background-color: #6ba106;
+  border-radius: 10px;
+  color: #fff;
+  top: 10px;
+  right: 10px;
+}
+
+section .imgs .div-3:after {
+  content: "ازرائيل";
+  position: absolute;
+  padding: 2px 15px;
+  font-size: 1rem;
+  background-color: #6ba106;
+  border-radius: 10px;
+  color: #fff;
+  top: 10px;
+  right: 10px;
 }
 
 .c-lol {
@@ -159,12 +260,14 @@ section .imgs img {
 .c-lol .lol span p {
   font-size: 30px;
   font-weight: 1000;
+  color: var(--c-1);
+  text-align: center;
 }
 
 .wd {
   height: 100vh;
   width: 100%;
-  background-color: #00AFC5;
+  background-color: var(--c-3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,7 +286,7 @@ section .imgs img {
 
 .wd p {
   font-size: 4rem;
-  color: #fff;
+  color: var(--c-1);
   margin-bottom: 30px;
 }
 
@@ -228,7 +331,7 @@ section .imgs img {
   position: absolute;
   content: "";
   display: block;
-  background-color: #707070;
+  background-color: var(--c-1);
   opacity: .4;
   width: 100%;
   height: 100%;
@@ -280,7 +383,7 @@ section .imgs img {
 .c-f span h1 {
   font-size: 4rem;
   margin-bottom: 100px;
-  color: #707070;
+  color: var(--c-1);
 }
 
 .c-f span ul {
@@ -326,13 +429,13 @@ section .imgs img {
   font-size: 2rem;
   text-align: center;
   margin: 10px 0;
-  color: #242424;
+  color: var(--c-1);
 }
 
 footer {
   height: 226px;
   width: 100%;
-  background-color: #00AFC5;
+  background-color: var(--c-3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
