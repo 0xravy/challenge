@@ -1,1 +1,5 @@
-console.log("hello world");
+const func = (() => {
+    return console.log('faris');
+})()
+
+

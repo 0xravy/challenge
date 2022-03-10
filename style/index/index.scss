@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+
 @import '../vars';
 @import '../main';
 
@@ -47,18 +49,23 @@ section {
 
         .input {
             i {
+                position: absolute;
+                transform: translate(0px, -5px);
                 font-size: 2.5rem;           
-                color: $c-1;
+                color: $c-3;
+                z-index: 1;
             }
             input {
+                padding-left: 25px;
                 font-weight: 1000;
                 color: darken($c-3, 20%);
                 text-align: right;
                 outline: none;
+                color: $c-3;
                 font-size: 20px;
                 height: 30px;
                 border: none;
-                border-bottom: 1px solid rgb(1, 1, 41);
+                border-bottom: 1px solid $c-3;
                 transform: translateY(-5px);
                 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             }
@@ -152,40 +159,196 @@ section {
 .c-main {
 
     .main {
-        height: 100%;
+        height: 70%;
         width: 100%;
-        // height: auto;
         display: grid;
         grid-template-areas:
         'span-1 span-2 span-3 span-4'
         'span-5 span-6 span-7 span-8';
+        gap: 1rem;
 
 
         div {
-            height: 100%;
-            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            height: auto;
+            width: 85%;
             object-fit: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-
-            span {
-                height: 100%;
+            z-index: -1;
+            div {
+                position: relative;
                 width: 100%;
-                opacity: 0.5;
-                background: #707070;
+                height: 200px;
 
-                p {
-                    font-size: 20px;
-                    font-weight: 100;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    background-color: $c-1;
+                    opacity: .4;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &:after {
+                    content: "ازرائيل";
+                    position: absolute;
+                    padding: 2px 15px;
+                    font-size: 1rem;
+                    background-color: #6ba106;
+                    border-radius: 10px;
+                    color: #fff;
+                    top: 10px;
+                    right: 10px;
                 }
             }
+
+            h4, p {
+                font-size: 2rem;
+                padding: 5px 0;
+                direction: rtl;
+                font-weight: 600;
+                color: #686868;
+            }
+            
+            p {
+                font-size: .9rem;
+                color: #888888;
+            }
+
+            
+            
         }
         
     }
 }
 
 
+.c-f {
 
+    span {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 100px;
+            color: $c-1;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            div {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                text-align: center;
+
+                div {
+                    
+                    text-align: center;
+
+
+                    img{
+                        object-position: center center;                    
+                        object-fit: cover;
+                        width: 280px;
+                        height: 280px;
+                        border-radius: 50%;
+                        margin: auto;
+                    }
+                }
+            }
+
+
+            main {
+
+
+                p {
+                    font-size: 2rem;
+                    text-align: center;
+                    margin: 10px 0;
+                    color: darken($c-1, 30%);
+                }
+            }    
+        
+        
+            
+        }
+
+    }
+}
+
+
+footer {
+    height: 226px;
+    width: 100%;
+    background-color: $c-3;
+    display: flex;
+    direction: rtl;
+    color: #fff;
+    
+    .sh {
+        align-items: center;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        gap: 10px;
+
+
+
+        ul {
+            a {
+                font-size: 2.5rem;
+                color: #fff;
+                margin: 0 5px;
+
+                &:hover {
+                    color: yellow;
+                }
+            }
+        }
+
+        p {
+            font-size: 1.9rem;
+            font-weight: 0;
+        }
+        input {
+            width: 377px;
+            height: 45px;
+            font-size: 2rem;
+            border-radius: 37px;
+            text-align: center;
+        }
+        button {
+            width: 127px;
+            height: 32px;
+            font-size: 2rem;
+            color: #fff;
+            background: #FFB000 0% 0% no-repeat padding-box;
+            border-radius: 27px;
+            border: none;
+        }
+    }
+}
 
 
 
