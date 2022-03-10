@@ -120,7 +120,7 @@ section .imgs img {
 }
 
 .c-lol {
-  height: auto;
+  height: 350px;
   width: 100%;
 }
 
@@ -198,7 +198,7 @@ section .imgs img {
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'span-1 span-2 span-3 span-4' 'span-5 span-6 span-7 span-8';
-  gap: 1rem;
+  gap: 50px;
 }
 
 .c-main .main div {
@@ -409,6 +409,13 @@ footer div button {
   }
   section {
     width: 96%;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .c-main .main div div {
+    height: 300px;
+    width: 300px;
   }
 }
 /*# sourceMappingURL=index.css.map */

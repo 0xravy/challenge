@@ -98,7 +98,7 @@ section {
 }
 .c-lol {
 
-    height: auto;
+    height: 350px;
     width: 100%;
 
     .lol {
@@ -165,7 +165,7 @@ section {
         grid-template-areas:
         'span-1 span-2 span-3 span-4'
         'span-5 span-6 span-7 span-8';
-        gap: 1rem;
+        gap: 50px;
 
 
         div {
